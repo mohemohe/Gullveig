@@ -1,0 +1,24 @@
+﻿<UserControl x:Class="Gullveig.CaptionButtons"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:local="clr-namespace:Gullveig"
+             mc:Ignorable="d"
+             d:DesignHeight="32" d:DesignWidth="96">
+
+    <UserControl.Resources>
+        <ResourceDictionary Source="CaptionButtonsResourceDictionary.xaml" />
+    </UserControl.Resources>
+    <StackPanel Orientation="Horizontal">
+        <Button Name="MinimizeButton" Width="{Binding ActualHeight, Mode=OneWay, RelativeSource={RelativeSource Self}}" Template="{DynamicResource CaptionButton}" Grid.Column="0">
+            <TextBlock Name="MinimizeButtonText" Text="0" FontFamily="Marlett" FontSize="14.667" />
+        </Button>
+        <Button Name="MaximizeButton" Width="{Binding ActualHeight, Mode=OneWay, RelativeSource={RelativeSource Self}}" Template="{DynamicResource CaptionButton}" Grid.Column="1">
+            <TextBlock Name="MaximizeButtonText" Text="1" FontFamily="Marlett" FontSize="14.667" />
+        </Button>
+        <Button Name="CloseButton" Width="{Binding ActualHeight, Mode=OneWay, RelativeSource={RelativeSource Self}}" Template="{DynamicResource CaptionButton}" Grid.Column="2">
+            <TextBlock Name="CloseButtonText" Text="r" FontFamily="Marlett" FontSize="14.667" />
+        </Button>
+    </StackPanel>
+</UserControl>
